@@ -1,6 +1,6 @@
-* {
-  padding: 0;
-  margin: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -8,12 +8,22 @@ body {
   background-color: rgb(79, 136, 136);
   color: white;
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.1;
+  font-size: 1rem;
+}
+
+section {
+  padding: 10rem 2rem;
 }
 
 img {
   display: block;
   max-width: 100%;
+  border-radius: 0.75rem;
+}
+
+strong {
+  font-weight: bold;
 }
 
 h1,
@@ -24,11 +34,82 @@ h3 {
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 3rem;
 }
 h2 {
-  font-size: 3.75rem;
+  font-size: 2.25rem;
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.section-title {
+  margin: 0.5rem;
+}
+
+.section-title-intro {
+  font-weight: 300;
+}
+.section-title-intro strong {
+  display: block;
+}
+
+.section-subtitle {
+  margin: 0;
+  font-size: 1.25rem;
+  border-radius: 1rem;
+}
+
+.section-subtitle-intro,
+.section-subtitle-about {
+  background-color: rgb(103, 100, 80);
+  margin-bottom: 1rem;
+  padding: 0.3rem 2rem;
+}
+
+/* Header */
+nav {
+  display: none;
+}
+
+/* intro section */
+.intro {
+  position: relative;
+}
+
+.intro-img {
+  box-shadow: 0.25rem 0.25rem 1.5rem rgba(0, 0, 0, 0.75);
+  border-radius: 0.75rem;
+}
+
+.section-subtitle-intro {
+  display: inline-block;
+}
+
+@media (min-width: 600px) {
+  .intro {
+    display: grid;
+    width: min-content;
+    margin: 0 auto;
+    grid-column-gap: 2rem;
+    grid-template-areas:
+      "img title"
+      "img subtitle";
+    grid-template-columns: min-content max-content;
+  }
+  .intro-img {
+    grid-area: img;
+    min-width: 280px;
+    position: relative;
+    z-index: 2;
+  }
+  .section-subtitle-intro {
+    align-self: start;
+    grid-column: -1 / 1;
+    grid-row: 2;
+    text-align: right;
+    position: relative;
+    left: -2.5rem;
+    width: calc(100% + 2.5rem);
+  }
 }
