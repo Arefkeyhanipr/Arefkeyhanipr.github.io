@@ -1,9 +1,10 @@
+/* Reset */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
+/* General styles */
 body {
   background-color: rgb(79, 130, 136);
   color: white;
@@ -33,7 +34,7 @@ img {
   cursor: pointer;
   font-size: 1rem;
   font-weight: 300;
-  /* letter-spacing: 1.5px; */
+  letter-spacing: 1.5px;
   transition: transform 0.3s ease-out;
 }
 .btn:hover {
@@ -41,7 +42,7 @@ img {
 }
 
 strong {
-  font-weight: bold;
+  font-weight: 900;
 }
 
 h1,
@@ -60,7 +61,7 @@ h2 {
 h3 {
   font-size: 1.25rem;
 }
-
+/* Section */
 .section-title {
   margin: 0.5rem;
 }
@@ -82,7 +83,7 @@ h3 {
 .section-subtitle-about {
   background-color: rgb(103, 100, 80);
   margin-bottom: 1rem;
-  padding: 0.3rem 2rem;
+  padding: 0.3rem 1.7rem;
 }
 
 /* Header */
@@ -93,7 +94,6 @@ nav {
 /* intro section */
 .intro {
   position: relative;
-  /* height: 85vh; */
 }
 
 .intro-img {
@@ -133,7 +133,7 @@ nav {
     width: calc(100% + 2.5rem);
   }
 }
-
+/* services */
 .my-services {
   background-color: rgba(0, 0, 0, 0.915);
   background-image: url(./photos/safar-safarov-MSN8TFhJ0is-unsplash.jpg);
@@ -180,5 +180,46 @@ nav {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+/* About me section */
+
+.about-me {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.about-me-image {
+  box-shadow: 0.25rem 0.25rem 1.5rem rgba(0, 0, 0, 0.75);
+}
+
+@media (min-width: 600px) {
+  .about-me {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    grid-template-areas:
+      "title img"
+      "subtitle img"
+      "text img";
+    grid-column-gap: 2rem;
+  }
+
+  .section-title-about {
+    grid-area: title;
+  }
+  .section-subtitle-about {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    position: relative;
+    left: -1rem;
+    width: calc(100% + 2rem);
+    padding-left: 1rem;
+    padding-right: calc(200px + 4rem);
+  }
+
+  .about-me-image {
+    grid-area: img;
+    position: relative;
+    z-index: 2;
   }
 }
