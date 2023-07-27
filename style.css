@@ -20,6 +20,10 @@ section {
 img {
   display: block;
   max-width: 100%;
+}
+.logo,
+.intro-img,
+.about-me-image {
   border-radius: 0.75rem;
 }
 
@@ -221,4 +225,46 @@ nav {
     position: relative;
     z-index: 2;
   }
+}
+
+/* My work */
+
+.my-work {
+  background-color: #e1b382;
+  color: #12343b;
+  text-align: center;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1px;
+  max-width: 1199px;
+  margin: auto;
+}
+
+.portfolio-item {
+  background-color: #8a8a8a;
+  overflow: hidden;
+  border-radius: 0.3rem;
+}
+
+.portfolio-img {
+  transition: transform 0.75s cubic-bezier(0.5, 0, 0.5, 1), opacity 0.25s linear;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-img:hover {
+  transform: scale(1.2);
+  opacity: 0.75;
+}
+
+.section-subtitle-work {
+  color: #2d545e;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 22px;
 }
