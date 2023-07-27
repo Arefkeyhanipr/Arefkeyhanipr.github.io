@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: rgb(79, 136, 136);
+  background-color: rgb(79, 130, 136);
   color: white;
   margin: 0;
   line-height: 1.1;
@@ -13,13 +13,31 @@ body {
 }
 
 section {
-  padding: 10rem 2rem;
+  padding: 5rem 2rem;
 }
 
 img {
   display: block;
   max-width: 100%;
   border-radius: 0.75rem;
+}
+
+/* My work button */
+.btn {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  background-color: rgb(136, 130, 79);
+  border-radius: 0.75rem;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  transition: transform 0.3s ease-out;
+}
+.btn:hover {
+  transform: scale(1.1);
 }
 
 strong {
@@ -75,6 +93,7 @@ nav {
 /* intro section */
 .intro {
   position: relative;
+  height: 85vh;
 }
 
 .intro-img {
@@ -111,5 +130,54 @@ nav {
     position: relative;
     left: -2.5rem;
     width: calc(100% + 2.5rem);
+  }
+}
+
+.my-services {
+  background-color: rgba(0, 0, 0, 0.915);
+  background-image: url(./photos/safar-safarov-MSN8TFhJ0is-unsplash.jpg);
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: white;
+  text-align: center;
+  height: 100vh;
+  padding-top: 250px;
+  line-height: 25px;
+  font-size: 18px;
+}
+
+.section-title-services {
+  color: white;
+  position: relative;
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+.section-title-services::after {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 1px;
+  margin: 0.5rem auto 1rem;
+  background-color: white;
+  margin-top: 10px;
+  opacity: 0.6;
+}
+
+.services {
+  margin-bottom: 1rem;
+}
+
+.service {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+  .services {
+    display: flex;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
