@@ -13,7 +13,7 @@ body {
 }
 
 section {
-  padding: 5rem 2rem;
+  padding: 10rem 2rem;
 }
 
 img {
@@ -93,7 +93,7 @@ nav {
 /* intro section */
 .intro {
   position: relative;
-  height: 85vh;
+  /* height: 85vh; */
 }
 
 .intro-img {
@@ -115,6 +115,7 @@ nav {
       "img title"
       "img subtitle";
     grid-template-columns: min-content max-content;
+    height: 85vh;
   }
   .intro-img {
     grid-area: img;
