@@ -6,11 +6,11 @@
 }
 /* General styles */
 body {
-  background-color: rgb(79, 130, 136);
+  background-color: #9b734dc0;
   color: white;
   margin: 0;
   line-height: 1.1;
-  font-size: 1rem;
+  font-size: 18px;
 }
 
 section {
@@ -27,7 +27,7 @@ img {
 .btn {
   display: inline-block;
   padding: 1rem 1.5rem;
-  background-color: rgb(136, 130, 79);
+  background-color: #2d545e;
   border-radius: 0.75rem;
   color: white;
   text-decoration: none;
@@ -144,7 +144,6 @@ nav {
   height: 100vh;
   padding-top: 250px;
   line-height: 25px;
-  font-size: 18px;
 }
 
 .section-title-services {
