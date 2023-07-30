@@ -104,15 +104,15 @@ header {
 
 nav {
   position: fixed;
-  background: #20525c;
-  color: #edc69d;
+  background: #f3cea7;
+  color: #20525c;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   z-index: 100;
   transition: transform 0.25s cubic-bezier(0.5, 0, 0.5, 1);
-  transform: translateX(0%);
+  transform: translateX(100%);
 }
 
 .nav-list {
@@ -131,12 +131,54 @@ nav {
   font-size: 2.25rem;
   text-decoration: none;
 }
-/* .nav-link:hover {
-} */
+
 .nav-item:hover {
   transition: transform 0.5s ease-in-out;
   transform: scale(1.4);
-  color: #ebaa64;
+  color: #1b4149;
+}
+
+.nav-toggle {
+  padding: 0.5rem;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 1000;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  background: rgb(103, 100, 80);
+  width: 2rem;
+  height: 5px;
+  border-radius: 0.5rem;
+  transition: transform 0.25s ease-in-out;
+}
+
+.hamburger::before {
+  top: 6px;
+  margin-top: 1px;
+}
+.hamburger::after {
+  bottom: 6px;
+  margin-bottom: 1px;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: rgb(103, 100, 80);
 }
 
 /* intro section */
