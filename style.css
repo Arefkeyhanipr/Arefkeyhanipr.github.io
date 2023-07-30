@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 /* General styles */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #9b734dc0;
   color: white;
@@ -99,7 +104,7 @@ header {
 }
 
 .logo {
-  max-width: 100px;
+  max-width: 175px;
 }
 
 nav {
@@ -147,6 +152,32 @@ nav {
   right: 1rem;
   top: 1rem;
   z-index: 1000;
+}
+.nav-toggle:hover {
+  transition: transform 0.5s ease-in-out;
+  transform: scale(1.25);
+}
+
+.nav-open {
+  overflow: hidden;
+}
+.nav-open .nav {
+  transform: translateX(0);
+}
+.nav-open .nav-toggle {
+  position: fixed;
+}
+
+.nav-open .hamburger {
+  transform: rotate(0.625turn);
+}
+
+.nav-open .hamburger::before {
+  transform: rotate(90deg) translateX(-7px);
+}
+
+.nav-open .hamburger::after {
+  opacity: 0;
 }
 
 .hamburger {
